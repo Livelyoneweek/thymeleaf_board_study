@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 상세 페이지</title>
+</head>
+<body>
+<h1 th:text="${border.getTitle()}">제목</h1>
+<p th:text="${border.getContent()}">내용 부분</p>
+
+<!-- href="#" 은 자기 url 호출-->
+<a th:href="@{/board/delete(id=${border.getId()})}">글 삭제</a>
+<a th:href="@{/board/modify/{id}(id=${border.getId()})}">글 수정</a>
+</body>
+</html>
